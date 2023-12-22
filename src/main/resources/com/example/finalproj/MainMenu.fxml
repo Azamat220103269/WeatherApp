@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalproj.AppController">
+   <children>
+      <ImageView fitHeight="396.0" fitWidth="647.0" layoutX="-3.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../wr.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="120.0" fitWidth="149.0" layoutX="163.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../nanahu.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="120.0" fitWidth="149.0" layoutX="14.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../nanahu.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="184.0" layoutX="390.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../search.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="SearchCityText" alignment="TOP_CENTER" cache="true" layoutX="398.0" layoutY="23.0" opacity="0.49" prefHeight="30.0" prefWidth="157.0" promptText="Search city" scaleShape="false" style="-fx-background-color: 0; -fx-text-fill: #FFFFFF;">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+         </font>
+      </TextField>
+      <HBox layoutX="29.0" layoutY="161.0" prefHeight="64.0" prefWidth="278.0">
+         <children>
+            <Label fx:id="Lhumidity" prefHeight="64.0" prefWidth="108.0" text="Humidity" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="Lfeelslike" layoutX="10.0" layoutY="10.0" prefHeight="64.0" prefWidth="114.0" text="Feels like" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="Lvisibily" layoutX="80.0" layoutY="10.0" prefHeight="64.0" prefWidth="70.0" text="Visibilty" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Label fx:id="LabelTime1" layoutX="238.0" layoutY="146.0" prefHeight="30.0" prefWidth="94.0" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="20.0" />
+         </font></Label>
+      <Label fx:id="LabelTemperature" layoutX="29.0" layoutY="62.0" prefHeight="122.0" prefWidth="196.0" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="96.0" />
+         </font>
+      </Label>
+      <Label fx:id="LabelCity" layoutX="14.0" layoutY="-1.0" prefHeight="78.0" prefWidth="358.0" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="61.0" />
+         </font>
+      </Label>
+      <Button fx:id="BtnAdvice" layoutX="29.0" layoutY="241.0" mnemonicParsing="false" onAction="#handleGenerateAdvice" prefHeight="102.0" prefWidth="127.0" style="-fx-background-color: 0;" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Californian FB" size="26.0" />
+         </font>
+         <graphic>
+            <Label fx:id="LabelAdvice" alignment="CENTER" prefHeight="85.0" prefWidth="87.0" text="Advice" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic Bold" size="25.0" />
+               </font>
+            </Label>
+         </graphic>
+      </Button>
+      <Button fx:id="BtnWeek" layoutX="174.0" layoutY="244.0" mnemonicParsing="false" onAction="#updateWeeklyForecast" prefHeight="96.0" prefWidth="127.0" style="-fx-background-color: 0;">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+         <graphic>
+            <Label fx:id="LabelWeek" alignment="CENTER" prefHeight="68.0" prefWidth="93.0" text="Week&#10;Weather&#10;" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic Bold" size="22.0" />
+               </font>
+            </Label>
+         </graphic></Button>
+      <ImageView fitHeight="276.0" fitWidth="223.0" layoutX="384.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../hzktono.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="Forcast" layoutX="408.0" layoutY="84.0" lineSpacing="5.0" prefHeight="235.0" prefWidth="177.0" style="-fx-text-fill: #FFFFFF;">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font></Label>
+      <ImageView fx:id="imageNot" fitHeight="23.0" fitWidth="24.0" layoutX="593.0" layoutY="27.0">
+         <image>
+            <Image url="@../../../notification-bell.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="Notify" layoutX="593.0" layoutY="27.0" mnemonicParsing="false" onAction="#notifyButtonPressed" prefHeight="23.0" prefWidth="24.0" style="-fx-background-color: 0;">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
